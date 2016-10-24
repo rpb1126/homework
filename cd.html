@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background: url("bg.jpg") no-repeat;
+        }
+       .box{
+           width: 200px;
+           height: 203px;
+           position: absolute;
+           left: 100px;
+           bottom: 100px;
+           -webkit-transform: perspective(800px) translate(0,0);
+           -webkit-transform-style: preserve-3d;
+       }
+       .box div{
+           position: absolute;
+           left: 0;
+           top: 0;
+       }
+        .cd{
+            -webkit-transform: translateZ(-10px);
+            -webkit-transition: 2s all ease;
+        }
+        .img{
+           -webkit-transform: translateZ(10px);
+            -webkit-transition: 2s all ease;
+        }
+        .box:hover .cd{
+            -webkit-transform: translate(0,-40px) rotateZ(30deg);
+        }
+        .box:hover .img{
+            -webkit-transform: translate(0,10px);
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+        <div class="cd"><img  src="cd.png"></div>
+       <div class="img" ><img src="img_01.jpg"></div>
+</div>
+</body>
+</html>
